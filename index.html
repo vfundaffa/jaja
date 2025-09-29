@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naufal Daffa - Personal Website</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <script>
+  function animateSkills() {
+    const skills = document.querySelectorAll('.bar');
+    const triggerBottom = window.innerHeight * 0.85;
+    const triggerTop = 0; // bagian atas layar
+
+    skills.forEach(bar => {
+      const barTop = bar.getBoundingClientRect().top;
+      const barBottom = bar.getBoundingClientRect().bottom;
+
+      // Jika bar masuk viewport → animasi isi
+      if (barTop < triggerBottom && barBottom > triggerTop) {
+        bar.style.width = bar.getAttribute('data-width');
+      } 
+      // Jika bar keluar viewport → reset jadi 0
+      else {
+        bar.style.width = "0";
+      }
+    });
+  }
+
+  window.addEventListener('scroll', animateSkills);
+</script>
+
+
+  <!-- Navbar -->
+  <nav>
+  <div class="wrapper nav-wrapper">
+    <div class="brand">Naufal Daffa</div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <div class="menu" id="menu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Home -->
+  <section id="home">
+    <div class="wrapper">
+      <div class="hero">
+        <h1>Halo, Saya <span>Naufal Daffa</span></h1>
+        <p>Calon profesional di bidang akuntansi, analisis, dan audit.</p>
+      </div>
+    </div>
+  </section>
+
+    </div>
+  </div>
+</section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="wrapper">
+      <h2>Tentang Saya</h2>
+      <div class="about-box">
+        <p>
+          Saya <strong>Naufal Daffa</strong>, lulusan SMK Negeri 5 Mauk jurusan Multimedia dengan pengalaman kerja di bidang administrasi, keuangan, dan data entry. 
+          Saya terbiasa mengelola laporan, monitoring anggaran, serta mendukung proses HR seperti pengelolaan database karyawan dan tabulasi gaji. 
+          Saya memiliki keterampilan dalam Microsoft Office, Adobe Creative Suite, dan Microsoft Dynamics NAV. 
+          Saya adalah pribadi yang komunikatif, cepat belajar, mampu bekerja baik secara tim maupun individu, serta memiliki motivasi tinggi untuk terus berkembang. 
+          Saya juga tertarik pada tantangan yang berkaitan dengan akuntansi, analisis, dan audit.
+        </p>
+      </div>
+    </div>
+ <section id="services">
+  <div class="wrapper">
+    <h2>Layanan Saya</h2>
+    <div class="services-container">
+      <div class="service-card">
+        <h3>📊 Data Entry & Administrasi</h3>
+        <p>Menginput, mengelola, dan memverifikasi data dengan rapi serta membuat laporan harian dan bulanan.</p>
+      </div>
+      <div class="service-card">
+        <h3>💼 HR & Payroll Support</h3>
+        <p>Mengelola database karyawan, perhitungan gaji, lembur, hingga pembuatan dokumen HR seperti paklaring dan BPJS.</p>
+      </div>
+      <div class="service-card">
+        <h3>🧾 Akuntansi Dasar & Analisis</h3>
+        <p>Membantu pencatatan akuntansi sederhana, analisis laporan, serta mendukung proses audit internal.</p>
+      </div>
+      <div class="service-card">
+        <h3>🎨 Desain & Multimedia</h3>
+        <p>Menggunakan Adobe Photoshop, Premiere Pro, dan After Effects untuk membuat desain grafis dan editing video.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+  <div class="wrapper">
+    <h2>Pengalaman</h2>
+    <div class="portfolio-container">
+
+      <div class="portfolio-card">
+        <h3>PT. Impact Power Mandiri</h3>
+        <p><strong>Staff Administrasi HR & Finance</strong><br>(Ags 2024 – Now)</p>
+        <p>Mengelola debit note, monitoring budget, perjalanan dinas, database karyawan, tabulasi gaji, dan perhitungan lembur.</p>
+      </div>
+
+      <div class="portfolio-card">
+        <h3>PT. Sapta Warna Cemerlang</h3>
+        <p><strong>Production Data Entry Staff</strong><br>(Feb 2024 – Ags 2024)</p>
+        <p>Input laporan harian, rekap hasil produksi, stock opname bulanan, label produk, dan perhitungan material usage.</p>
+      </div>
+
+      <div class="portfolio-card">
+        <h3>Ekstrakurikuler Teater</h3>
+        <p><strong>Ketua Produksi</strong><br>(2022 – 2023)</p>
+        <p>Mengelola kegiatan produksi teater, mengatur anggota tim, dan menyusun laporan pertunjukan.</p>
+      </div>
+
+      <div class="portfolio-card">
+        <h3>Fotografi & Multimedia</h3>
+        <p><strong>Camera Operator / Dokumentasi</strong><br>(Freelance)</p>
+        <p>Bertanggung jawab dalam pengambilan gambar foto & video, dokumentasi acara, serta editing dasar menggunakan Adobe Premiere Pro dan Photoshop.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Skills -->
+ <section id="skills">
+  <div class="wrapper">
+    <h2>Keahlian</h2>
+
+    <!-- Hard Skills -->
+    <div class="skills-category">
+      <h3>Hard Skills</h3>
+      <div class="skill">
+        <span>Microsoft Office</span>
+        <div class="progress"><div class="bar" data-width="90%"></div></div>
+      </div>
+      <div class="skill">
+        <span>Microsoft Dynamics NAV</span>
+        <div class="progress"><div class="bar" data-width="70%"></div></div>
+      </div>
+      <div class="skill">
+        <span>Adobe Photoshop</span>
+        <div class="progress"><div class="bar" data-width="75%"></div></div>
+      </div>
+      <div class="skill">
+        <span>Adobe Premiere Pro</span>
+        <div class="progress"><div class="bar" data-width="70%"></div></div>
+      </div>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="skills-category">
+      <h3>Soft Skills</h3>
+      <div class="skill">
+        <span>Komunikasi</span>
+        <div class="progress"><div class="bar" data-width="85%"></div></div>
+      </div>
+      <div class="skill">
+        <span>Kerja Tim & Individu</span>
+        <div class="progress"><div class="bar" data-width="80%"></div></div>
+      </div>
+      <div class="skill">
+        <span>Fast Learner</span>
+        <div class="progress"><div class="bar" data-width="85%"></div></div>
+      </div>
+      <div class="skill">
+        <span>Integritas Tinggi</span>
+        <div class="progress"><div class="bar" data-width="90%"></div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="wrapper">
+      <h2>Hubungi Saya</h2>
+      <p>Silakan hubungi saya melalui WhatsApp atau e-mail berikut:</p>
+      <div class="contact-info">
+        <p>📱 WhatsApp: <a href="https://wa.me/628386039602" target="_blank">0838-6039-602</a></p>
+        <p>✉️ Email: <a href="mailto:naufaldaffa5599@gmail.com">naufaldaffa5599@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Naufal Daffa. All rights reserved.</p>
+  </footer>
+
+  <!-- Script Toggle Menu -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu   = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
+
